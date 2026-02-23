@@ -1,0 +1,27 @@
+# created by virtualenv automatically
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyCharm
+.idea/
+*.iml
+
+# Playwright
+playwright-report/
+test-results/
+
+# OS
+.DS_Store
+
+allure-results/
+allure-report/
+.env
+node_modules/
