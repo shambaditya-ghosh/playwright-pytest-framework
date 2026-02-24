@@ -6,7 +6,10 @@ import allure
 @pytest.fixture(scope="function")
 def page():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(
+            headless=False,  # 👈 headed mode
+            slow_mo=1500  # 👈 1.5 second delay
+        )
         context = browser.new_context()
         page = context.new_page()
         yield page
