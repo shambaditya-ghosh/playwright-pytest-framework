@@ -68,7 +68,6 @@ Run all tests, Allure results and report:  ```pytest -v --alluredir=reports/allu
 ## 🔥 Future Enhancements
 
 - Parallel execution
-- Environment-based execution (QA/Stage/Prod)
 - CI integration (GitHub Actions / Jenkins)
 - Docker support
 - API test integration
