@@ -6,14 +6,10 @@ import allure
 @pytest.fixture(scope="function")
 def page():
     with sync_playwright() as p:
-<<<<<<< HEAD
         browser = p.chromium.launch(
-            headless=False,  #  headed mode
-            slow_mo=1500     #  1.5s delay
+            headless=False,
+            slow_mo=1500
         )
-=======
-        browser = p.chromium.launch(headless=False)
->>>>>>> parent of 02033d3 (Changes in conftest.py & Readme.md)
         context = browser.new_context()
         page = context.new_page()
         yield page
@@ -25,13 +21,13 @@ def pytest_runtest_makereport(item, call):
     outcome = yield
     rep = outcome.get_result()
 
-    # We take screenshot only after test execution phase
-    if rep.when == "call":
+    # Only attach screenshot if test FAILED
+    if rep.when == "call" and rep.failed:
         page = item.funcargs.get("page")
         if page:
             screenshot = page.screenshot()
             allure.attach(
                 screenshot,
-                name=f"{item.name}_screenshot",
+                name=f"{item.name}_failure_screenshot",
                 attachment_type=allure.attachment_type.PNG
             )
