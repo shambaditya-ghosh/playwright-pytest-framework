@@ -20,34 +20,34 @@ Designed with maintainability, scalability, and clean architecture in mind.
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/shambaditya-ghosh/playwright-pytest-framework.git
+`git clone https://github.com/shambaditya-ghosh/playwright-pytest-framework.git`
 
-cd playwright-pytest-framework
+`cd playwright-pytest-framework`
 
 ### 2️⃣ Create Virtual Environment
 
-python -m venv venv
+`python -m venv venv`
 
 ### Mac/Linux 
-source venv/bin/activate 
+`source venv/bin/activate`
 
 ### Windows
-venv\Scripts\activate 
+`venv\Scripts\activate`
 
 ### 3️⃣ Install Dependencies
 
-pip install -r requirements.txt
-playwright install
+`pip install -r requirements.txt`
+`playwright install`
 
 ## ▶️ Running Tests
 
-Run all tests: pytest -v
+Run all tests: `pytest -v`
 
-Run with Allure results: pytest --alluredir=allure-results
+Run with Allure results: `pytest --alluredir=allure-results`
 
-Generate Allure report: allure serve allure-results
+Generate Allure report: `allure serve allure-results`
 
-Run all tests, Allure results and report: pytest -v --alluredir=reports/allure-results && allure serve reports/allure-results
+Run all tests, Allure results and report: `pytest -v --alluredir=reports/allure-results && allure serve reports/allure-results`
 
 ## 📊 Allure Reporting
 
