@@ -47,8 +47,6 @@ Run with Allure results: pytest --alluredir=allure-results
 
 Generate Allure report: allure serve allure-results
 
-Run above commands in one go :  pytest -v && pytest --alluredir=allure-results && allure serve allure-results
-
 ## 📊 Allure Reporting
 
 - Automatically captures test execution details

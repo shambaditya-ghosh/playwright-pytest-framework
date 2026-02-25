@@ -6,10 +6,14 @@ import allure
 @pytest.fixture(scope="function")
 def page():
     with sync_playwright() as p:
+<<<<<<< HEAD
         browser = p.chromium.launch(
             headless=False,  #  headed mode
             slow_mo=1500     #  1.5s delay
         )
+=======
+        browser = p.chromium.launch(headless=False)
+>>>>>>> parent of 02033d3 (Changes in conftest.py & Readme.md)
         context = browser.new_context()
         page = context.new_page()
         yield page
