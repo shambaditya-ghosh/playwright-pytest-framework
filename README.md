@@ -39,7 +39,7 @@ cd playwright-pytest-framework
 `pip install -r requirements.txt
 `
 `playwright install
-``
+`
 ## ▶️ Running Tests
 
 Run all tests: ```pytest -v```
