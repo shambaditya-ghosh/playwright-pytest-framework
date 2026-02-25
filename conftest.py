@@ -6,7 +6,10 @@ import allure
 @pytest.fixture(scope="function")
 def page():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(
+            headless=False,
+            slow_mo=1500
+        )
         context = browser.new_context()
         page = context.new_page()
         yield page
@@ -18,13 +21,13 @@ def pytest_runtest_makereport(item, call):
     outcome = yield
     rep = outcome.get_result()
 
-    # We take screenshot only after test execution phase
-    if rep.when == "call":
+    # Only attach screenshot if test FAILED
+    if rep.when == "call" and rep.failed:
         page = item.funcargs.get("page")
         if page:
             screenshot = page.screenshot()
             allure.attach(
                 screenshot,
-                name=f"{item.name}_screenshot",
+                name=f"{item.name}_failure_screenshot",
                 attachment_type=allure.attachment_type.PNG
             )
