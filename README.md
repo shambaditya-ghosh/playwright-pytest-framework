@@ -20,9 +20,9 @@ Designed with maintainability, scalability, and clean architecture in mind.
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/shambaditya-ghosh/playwright-pytest-framework.git
+`git clone https://github.com/shambaditya-ghosh/playwright-pytest-framework.git`
 
-cd playwright-pytest-framework
+`cd playwright-pytest-framework`
 
 ### 2️⃣ Create Virtual Environment
 
