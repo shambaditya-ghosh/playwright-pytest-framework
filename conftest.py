@@ -20,7 +20,7 @@ def page(request):
         if browser_type == "firefox":
             browser = p.firefox.launch(headless=False, slow_mo=1500)
         elif browser_type == "safari":
-            browser = p.webkit.launch(channel="safari", headless=False, slow_mo=1500)
+            browser = p.webkit.launch(headless=False, slow_mo=1500)
         else:
             browser = p.chromium.launch(headless=False, slow_mo=1500)
 
