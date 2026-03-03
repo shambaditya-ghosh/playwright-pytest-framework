@@ -89,4 +89,3 @@ def test_login_with_valid_user_firefox_edge(page: Page) -> None:
     # Assertion for successful login
     products_header = page.locator("span.title")
     expect(products_header).to_contain_text("Products")
-
